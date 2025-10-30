@@ -38,10 +38,41 @@ $card-bg: $dark;
 $card-color: $info;
 $card-border-radius: 2rem;
 
-// Default danger
-$danger: #ff0077;
+// Border-radius stile pillola per bottoni, badge e input
+$btn-border-radius: 10rem;
+$badge-border-radius: 10rem;
+$input-border-radius: 10rem;
 
-@import "./scss/maps";
-@import "./scss/mixins";
-@import "./scss/utilities";
+//  Colors
+$custom-theme-colors: (
+  "danger": #ff0077,
+  "info": #00ffea,
+  "light": #f3eeff,
+  "epicode-1": #5726c3,
+  "epicode-2": #8625a5,
+  "epicode-3": #cb2376,
+);
+
+// Merge unico
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// Nuovi breakpoints
+$custom-grid-breakpoints: (
+  3xl: 1600px,
+  4xl: 1800px,
+);
+
+$grid-breakpoints: map-merge($grid-breakpoints, $custom-grid-breakpoints);
+
+// Max-width dei nuovi breakpoints
+$custom-container-max-widths: (
+  3xl: 1520px,
+  4xl: 1720px,
+);
+
+$container-max-widths: map-merge(
+  $container-max-widths,
+  $custom-container-max-widths
+);
+
 @import "./scss/bootstrap.scss";
