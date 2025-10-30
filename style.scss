@@ -1,1 +1,47 @@
+//  Importo funzioni di Bootstrap
+@import "./scss/functions";
+
+//  Importo variabili di Bootstrap
+@import "./scss/variables";
+
+//  Creo la mia mappa personalizzata dei font-size
+$custom-font-sizes: (
+  7: 0.875rem,
+  8: 0.75rem,
+  9: 0.625rem,
+  10: 0.5rem,
+);
+
+//  Merge con la mappa originale di Bootstrap
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+// Estendo i border-width Bootstrap fino a .border-10
+$custom-border-widths: (
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px,
+);
+
+$border-widths: map-merge($border-widths, $custom-border-widths);
+
+// Button default padding
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
+
+// Gutter default
+$grid-gutter-width: 0.5rem;
+
+// Default cards style
+$card-bg: $dark;
+$card-color: $info;
+$card-border-radius: 2rem;
+
+// Default danger
+$danger: #ff0077;
+
+@import "./scss/maps";
+@import "./scss/mixins";
+@import "./scss/utilities";
 @import "./scss/bootstrap.scss";
